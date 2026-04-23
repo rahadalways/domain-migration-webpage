@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^basicmama\.shop$ [NC,OR]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^(.*)$ https://basicmama.shop/ [L,R=301]
